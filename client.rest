@@ -1,0 +1,15 @@
+@baseUrl = http://localhost:3000
+
+### AppControllerGetHello
+# @name AppControllerGetHello
+GET {{baseUrl}}/app/get/hello
+
+### AppControllerGetAll
+# @name AppControllerGetAll
+GET {{baseUrl}}/app/get/all
+
+# MESSAGES
+###
+GET {{baseUrl}}/messages
+###
+GET {{baseUrl}}/messages/12
