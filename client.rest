@@ -8,8 +8,31 @@ GET {{baseUrl}}/app/get/hello
 # @name AppControllerGetAll
 GET {{baseUrl}}/app/get/all
 
+
 # MESSAGES
-###
+### Lista todas as mensagens
 GET {{baseUrl}}/messages
-###
-GET {{baseUrl}}/messages/12
+?page=10
+&limit=10
+### Retorna apenas uma mensagem
+GET {{baseUrl}}/messages/1
+### Cria uma mensagem
+POST {{baseUrl}}/messages
+Content-Type: application/json
+
+  {
+    "text": "New test message",
+    "from": "Davi",
+    "to": "Sofia"
+  }
+
+### Atualiza uma mensagem
+PATCH {{baseUrl}}/messages/2
+Content-Type: application/json
+
+  {
+    "text": "a"
+  }
+
+### Apaga uma mensagem
+DELETE {{baseUrl}}/messages/2
